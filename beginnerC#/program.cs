@@ -4,13 +4,16 @@
 
 // mcs compiles code into exe
 // mono runs the .exe file
-// namespace.class.method = order of names in a method call
+// namespace.class.method = order of names in a method call, such as System.Console.Write
 
 /////////////////
 
 ///////////////////
 // Fitness Frog //
 /////////////////
+
+// removes the need to type system in every method call
+using System;
 
 namespace Tutorial.FitnessFrog
 {
@@ -19,11 +22,15 @@ namespace Tutorial.FitnessFrog
         static void Main()
         {
             // Prompt user for minutes excerised 
-            System.Console.Write("Enter how many minutes you exercised: ");
+            Console.Write("Enter how many minutes you exercised: ");
+            string entry = Console.ReadLine();
 
-            string entry = System.Console.ReadLine();
             // Add minutes exercised to running total
+
             // Display total minutes exercised to view
+            // "+" is used to concatenate strings
+            Console.WriteLine("You have exercised " + entry + " minutes.");
+
             // Repeat until user quits
         }
     }
