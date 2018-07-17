@@ -25,11 +25,11 @@ public class NumberWizard : MonoBehaviour {
         {
             Debug.Log("You Pressed Up");
         }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        else if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             Debug.Log("You Pressed Down");
         }
-        if (Input.GetKeyUp(KeyCode.Return))
+        else if (Input.GetKeyUp(KeyCode.Return))
         {
             Debug.Log("You Pressed Enter");
         }    
