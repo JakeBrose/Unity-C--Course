@@ -24,17 +24,15 @@ public class NumberWizard : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            Debug.Log("Is your number...");
             min = guess;
             guess = (max + min) / 2;
-            Debug.Log(guess + " ?");
+            Debug.Log("Is your number " + guess + " ?");
         }
         else if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            Debug.Log("Is your number...");
             max = guess;
             guess = (max + min) / 2;
-            Debug.Log(guess + "?");
+            Debug.Log("Is your number " + guess + " ?");
         }
         else if (Input.GetKeyUp(KeyCode.Return))
         {
