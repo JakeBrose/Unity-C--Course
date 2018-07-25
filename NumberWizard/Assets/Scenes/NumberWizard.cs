@@ -17,25 +17,28 @@ public class NumberWizard : MonoBehaviour {
         Debug.Log("The lowest number you may choose is: " + min);
         Debug.Log("Tell me if your number is higher or lower than " + guess);
         Debug.Log("Press Up for Higher, Press Down for Lower, and Press Enter for Correct");
+        max = max + 1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            Debug.Log("You Pressed Up");
+            Debug.Log("Is your number...");
             min = guess;
-            Debug.Log(guess);
+            guess = (max + min) / 2;
+            Debug.Log(guess + " ?");
         }
         else if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            Debug.Log("You Pressed Down");
+            Debug.Log("Is your number...");
             max = guess;
-            Debug.Log(guess);
+            guess = (max + min) / 2;
+            Debug.Log(guess + "?");
         }
         else if (Input.GetKeyUp(KeyCode.Return))
         {
-            Debug.Log("You Pressed Enter");
+            Debug.Log("Your number is " + guess);
         }    
 	}
 }
